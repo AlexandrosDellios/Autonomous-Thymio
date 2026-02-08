@@ -1,13 +1,21 @@
 # 🤖 Thymio Autonomous Navigation: Vision & EKF Fusion
-**A robust multi-modal navigation stack utilizing computer vision and Extended Kalman Filters (EKF) for precise localization.**
+
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![OpenCV](https://img.shields.io/badge/OpenCV-%23EE4C2C.svg?style=for-the-badge&logo=opencv&logoColor=white)
+![EKF](https://img.shields.io/badge/EKF-%add8e6.svg?style=for-the-badge&logo=futurelearn&logoColor=blue)
+
+>**A robust multi-modal navigation stack utilizing computer vision and Extended Kalman Filters (EKF) for precise localization.**
 
 ---
 
 ## 📌 Project Overview
 This project implements an autonomous navigation system for the Thymio II robot. The system integrates **global path planning**, **local obstacle avoidance**, and **real-time state estimation** to navigate a map, reach a target goal, and handle dynamic disturbances such as "kidnapping" or sensor occlusion.
 
-> [!TIP]
-> **Insert Video/GIF here:** *A demonstration of the Thymio navigating to the goal while avoiding black obstacles.*
+<div align="center">
+  <img src="assets/demo2.gif" width="400" alt="Kidnapping">
+  <img src="assets/demo1.gif" width="400" alt="Blind">
+  <p><em>Left: Position estimation after kidnapping. Right: Robustness to blind vision</em></p>
+</div>
 
 ---
 
@@ -38,8 +46,9 @@ The system was validated across three critical scenarios:
 2. **Kidnapping:** The EKF and vision system successfully re-localized the robot after it was manually moved to a new position.
 3. **Occlusion:** The robot continued its trajectory using wheel odometry when the camera feed was obstructed, demonstrating the filter's reliability.
 
-> [!NOTE]
-> **Insert Plot here:** *EKF convergence plots or a side-by-side comparison of Vision vs. Filtered position.*
+<div align="center">
+  <img src="assets/VisionSetup.jpg" width="500" alt="vision setup">
+</div>
 
 ---
 
